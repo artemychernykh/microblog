@@ -1,0 +1,96 @@
+2024-04-01 20:38:07,114 ERROR: Exception on /user/Arina [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 87, in user
+    query = sa.select(Post).where(Post.author == username).order_by(Post.timestamp.desc())
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 762, in __eq__
+    self.property._optimized_compare(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1185, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
+2024-04-01 20:38:11,709 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:38:17,276 ERROR: Exception on /user/Arina [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 87, in user
+    query = sa.select(Post).where(Post.author == username).order_by(Post.timestamp.desc())
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 762, in __eq__
+    self.property._optimized_compare(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1185, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
+2024-04-01 20:41:59,110 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:42:05,050 ERROR: Exception on /user/Arina [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 87, in user
+    query = sa.select(Post).where(Post.author == username) #.order_by(Post.timestamp.desc())
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 762, in __eq__
+    self.property._optimized_compare(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1185, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
+2024-04-01 20:42:10,212 ERROR: Exception on /user/Артем [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 87, in user
+    query = sa.select(Post).where(Post.author == username) #.order_by(Post.timestamp.desc())
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 762, in __eq__
+    self.property._optimized_compare(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1185, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
+2024-04-01 20:43:25,635 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:52:47,275 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]

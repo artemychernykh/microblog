@@ -1,0 +1,92 @@
+2024-04-01 21:37:29,340 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 36, in index
+    next_url = url_for('index.html', page=posts.next_num) if posts.has_next else None
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/helpers.py", line 220, in url_for
+    return current_app.url_for(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html' with values ['page']. Did you mean 'index' instead?
+2024-04-01 21:37:56,833 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 21:41:41,072 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 22:43:27,417 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 22:50:31,191 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-01 22:52:03,806 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:42:02,665 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:45:19,490 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:49:46,722 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:52:29,083 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:52:41,163 ERROR: Exception on /reset_password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNzEyMDA0Njg2Ljk1MjI2Mjl9.YlrE8NBTA8YPWGjYqmHkqGsmWOzsWmOakXZ8TFdWuuU [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 209, in reset_password
+    user = User.verify_reset_password_token(token)
+  File "/Users/artyom/WL/flask_tutorial/app/models.py", line 110, in verify_reset_password_token
+    id = jwt.decode(token, app.config['SECRET_KEY'],
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jwt/api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jwt/api_jwt.py", line 147, in decode_complete
+    raise DecodeError(
+jwt.exceptions.DecodeError: It is required that you pass in a value for the "algorithms" argument when calling decode().
+2024-04-02 00:53:05,677 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 00:53:08,629 ERROR: Exception on /reset_password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNzEyMDA0Njg2Ljk1MjI2Mjl9.YlrE8NBTA8YPWGjYqmHkqGsmWOzsWmOakXZ8TFdWuuU [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 209, in reset_password
+    user = User.verify_reset_password_token(token)
+  File "/Users/artyom/WL/flask_tutorial/app/models.py", line 110, in verify_reset_password_token
+    id = jwt.decode(token, app.config['SECRET_KEY'],
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jwt/api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jwt/api_jwt.py", line 147, in decode_complete
+    raise DecodeError(
+jwt.exceptions.DecodeError: It is required that you pass in a value for the "algorithms" argument when calling decode().
+2024-04-02 01:04:20,566 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 12:59:23,363 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 13:00:57,880 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 13:08:50,188 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 13:10:00,156 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 14:22:45,886 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 14:24:07,809 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 14:29:02,656 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 14:54:22,449 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:33]
+2024-04-02 16:51:25,263 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 16:51:35,565 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 18:06:45,328 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 18:06:54,574 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 18:07:22,367 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:32:55,253 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:33:05,463 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:33:40,268 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:34:02,767 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:35:10,716 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 20:35:41,605 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]
+2024-04-02 22:26:07,442 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:41]

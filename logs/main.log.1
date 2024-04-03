@@ -1,0 +1,113 @@
+2024-04-01 20:52:53,050 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 32, in index
+    posts = db.paginates(query,
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 1008, in __getattr__
+    raise AttributeError(name)
+AttributeError: paginates
+2024-04-01 20:53:38,731 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 21:07:20,425 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 21:25:06,595 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 21:25:10,894 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 36, in index
+    next_url = url_for('index.html', page=posts.next_num) if posts.has_next else None
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/helpers.py", line 220, in url_for
+    return current_app.url_for(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html' with values ['page']. Did you mean 'index' instead?
+2024-04-01 21:35:18,115 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 36, in index
+    next_url = url_for('index.html', page=posts.next_num) if posts.has_next else None
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/helpers.py", line 220, in url_for
+    return current_app.url_for(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html' with values ['page']. Did you mean 'index' instead?
+2024-04-01 21:35:57,132 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 21:36:00,209 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 36, in index
+    next_url = url_for('index.html', page=posts.next_num) if posts.has_next else None
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/helpers.py", line 220, in url_for
+    return current_app.url_for(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html' with values ['page']. Did you mean 'index' instead?
+2024-04-01 21:37:26,505 ERROR: Exception on /index [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 36, in index
+    next_url = url_for('index.html', page=posts.next_num) if posts.has_next else None
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/helpers.py", line 220, in url_for
+    return current_app.url_for(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html' with values ['page']. Did you mean 'index' instead?

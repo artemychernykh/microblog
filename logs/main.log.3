@@ -1,0 +1,105 @@
+2024-04-01 01:42:18,315 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 01:57:00,885 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 13:54:18,191 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 16:58:10,007 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 17:01:49,581 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 17:02:12,903 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 17:02:29,409 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 17:02:45,257 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 17:20:10,985 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 18:19:19,966 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 18:32:01,989 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 18:37:25,296 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 18:37:45,612 ERROR: Exception on /follow/Arina [POST] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 115, in follow
+    user = db.session.scalar(sa.select(User).where(User.name == username))
+AttributeError: type object 'User' has no attribute 'name'
+2024-04-01 18:38:14,913 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 18:38:30,854 ERROR: Exception on /follow/Arina [POST] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 116, in follow
+    if user in None:
+TypeError: argument of type 'NoneType' is not iterable
+2024-04-01 18:38:46,550 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:17:27,502 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:17:51,642 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:23:50,272 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:24:00,479 ERROR: Exception on /explore [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 158, in explore
+    return render_template('index.html', title='Explore', posts=posts)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/artyom/WL/flask_tutorial/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/artyom/WL/flask_tutorial/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/artyom/WL/flask_tutorial/app/templates/index.html", line 6, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2024-04-01 20:25:34,416 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:30:50,036 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:33:02,423 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:37:09,200 INFO: App startup [in /Users/artyom/WL/flask_tutorial/app/__init__.py:29]
+2024-04-01 20:37:17,804 ERROR: Exception on /user/Arina [GET] [in /Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artyom/WL/flask_tutorial/app/routes.py", line 87, in user
+    query = sa.select(Post).where(Post.author == username).order_by(Post.timestamp.desc())
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 762, in __eq__
+    self.property._optimized_compare(
+  File "/Users/artyom/WL/flask_tutorial/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1185, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
